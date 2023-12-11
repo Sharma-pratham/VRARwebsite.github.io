@@ -1,0 +1,87 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #a9d8ff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav#navbar {
+    background-color: #044f72;
+    color: rgb(78, 42, 0);
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav#navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav#navbar ul li a {
+    color: #2b2166;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav#navbar ul li a:hover {
+    color: #ffffff;
+}
+
+section {
+    padding: 5em 2em;
+    margin-top: 0px;
+}
+
+/* Matrix Code Rain */
+@keyframes matrix-rain {
+    0% { color: #00ff00; }
+    100% { color: transparent; }
+}
+
+.matrix-code {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.matrix-code p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: matrix-rain 10s linear infinite;
+}
+
+#image-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-gap: 15px; 
+    max-width: 1200px; 
+    margin: auto;
+}
+
+#image-grid .grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
